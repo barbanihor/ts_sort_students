@@ -11,7 +11,7 @@ export enum SortType {
   Surname = "surname",
   Age = "age",
   Married = "married",
-  Grades = "grades",
+  AverageGrade = "grades",
 }
 
 // create SortOrder type
@@ -37,7 +37,7 @@ export function sortStudents(
       copyStudents.sort((age1, age2) => age1.age - age2.age);
       break;
 
-    case SortType.Grades:
+    case SortType.AverageGrade:
       copyStudents.sort((gr1, gr2) => {
         const averageFirst =
           gr1.grades.reduce((acum, curr) => acum + curr, 0) / gr1.grades.length;
